@@ -54,6 +54,7 @@ void progressData(Corrida *corrida, const char *nomeFicheiroProgress)
     char line[1024]; /*Criar buffer para as linhas*/
     int conta = 0;   /*Contagem do numero de atletas*/
 
+    /*Saltar a primeira linha*/
     fgets(line, sizeof(line), progressFile);
 
     while (fgets(line, sizeof(line), progressFile) && conta < NR_MAX_ATLETAS)
